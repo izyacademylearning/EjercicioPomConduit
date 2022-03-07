@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Conduit</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="214ceb9e50cbf9975464d232c4fd2c1f35e92196c42e09be37ef51b680b544b4.html">Critical Flow Article</a></span>
+                > <span class="truncate-60"><a
+                    href="123173d3c8f056d60aa15c38c7fb4a3acb1a6f3a74af25136e3157f0b6898038.html">critica Article </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 20-02-2022 17:31</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Critical Flow Article </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a user I<br />
+need to log in the page and crearte a article, update a article, view a article and delete a article
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">critica Article
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given Dalmi Go to website<br>When create a article, update a article, view a article and delete a article<br><table class='embedded'><thead><th>email</th><th>&lt;email&gt;</th></thead><tbody><tr><td>password</td><td>&lt;password&gt;</td></tr><tr><td>titleArticle</td><td>&lt;titleArticle&gt;</td></tr><tr><td>articleTopic</td><td>&lt;articleTopic&gt;</td></tr><tr><td>description</td><td>&lt;description&gt;</td></tr><tr><td>tags</td><td>&lt;tags&gt;</td></tr><tr><td>newtitleArticle</td><td>&lt;newtitleArticle&gt;</td></tr><tr><td>newarticleTopic</td><td>&lt;newarticleTopic&gt;</td></tr><tr><td>newdescription</td><td>&lt;newdescription&gt;</td></tr></tbody></table><br>Then validation the message "No articles are here... yet."</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="acb333265bb8fc8bb077c9ee1fb44994a4bd2ee0733a6529f98d23ea9f9e1b6a.png" title=" 1: critica Article ({email=dalmi@gmail.com, password=123456789, titleArticle=Hello, articleTopic=Greet, description=When you arrive at a new place always say hello, tags=Hello, newtitleArticle=Hola, newarticleTopic=saludo, newdescription=siempre que llega a un lugar saluda})" width="1366"/>
+                <img src="acb333265bb8fc8bb077c9ee1fb44994a4bd2ee0733a6529f98d23ea9f9e1b6a.png" title=" Given Dalmi Go to website" width="1366"/>
+                <img src="acb333265bb8fc8bb077c9ee1fb44994a4bd2ee0733a6529f98d23ea9f9e1b6a.png" title=" Open web site" width="1366"/>
+                <img src="2688aceaaa92a82fc71b5ff11f9591c2c8fa237780820fc47bdc32b2e79e19b9.png" title=" Given Dalmi Go to website (completed)" width="1366"/>
+                <img src="ba1ccc1400a7d5fd7f4337d69ff817d87ecd908529476b9238e904240a119511.png" title=" When create a article, update a article, view a article and delete a article
+| email | dalmi@gmail.com |
+| password | 123456789 |
+| titleArticle | Hello |
+| articleTopic | Greet |
+| description | When you arrive at a new place always say hello |
+| tags | Hello |
+| newtitleArticle | Hola |
+| newarticleTopic | saludo |
+| newdescription | siempre que llega a un lugar saluda |" width="1366"/>
+                <img src="ba1ccc1400a7d5fd7f4337d69ff817d87ecd908529476b9238e904240a119511.png" title=" Call flow article: {email=dalmi@gmail.com, password=123456789, titleArticle=Hello, articleTopic=Greet, description=When you arrive at a new place always say hello, tags=Hello, newtitleArticle=Hola, newarticleTopic=saludo, newdescription=siempre que llega a un lugar saluda}" width="1366"/>
+                <img src="199578dfd367336104dc703b69ade751df1b4499d4fbb8f7daf4d82708cbe1ae.png" title=" Call flow article: {email=dalmi@gmail.com, password=123456789, titleArticle=Hello, articleTopic=Greet, description=When you arrive at a new place always say hello, tags=Hello, newtitleArticle=Hola, newarticleTopic=saludo, newdescription=siempre que llega a un lugar saluda} (completed)" width="1366"/>
+                <img src="199578dfd367336104dc703b69ade751df1b4499d4fbb8f7daf4d82708cbe1ae.png" title=" When create a article, update a article, view a article and delete a article
+| email | dalmi@gmail.com |
+| password | 123456789 |
+| titleArticle | Hello |
+| articleTopic | Greet |
+| description | When you arrive at a new place always say hello |
+| tags | Hello |
+| newtitleArticle | Hola |
+| newarticleTopic | saludo |
+| newdescription | siempre que llega a un lugar saluda | (completed)" width="1366"/>
+                <img src="83607f1086bd9ee4ddca6101f901a7421224ebc7e9175ab95a6b033d31de6693.png" title=" Then validation the message &quot;No articles are here... yet.&quot;" width="1366"/>
+                <img src="1583f3b2188a42346905eb0765945c32c6246b1665b13bd3c60303b598080461.png" title=" Comparation message: No articles are here... yet." width="1366"/>
+                <img src="1583f3b2188a42346905eb0765945c32c6246b1665b13bd3c60303b598080461.png" title=" Comparation message: No articles are here... yet. (completed)" width="1366"/>
+                <img src="1583f3b2188a42346905eb0765945c32c6246b1665b13bd3c60303b598080461.png" title=" Then validation the message &quot;No articles are here... yet.&quot; (completed)" width="1366"/>
+                <img src="1583f3b2188a42346905eb0765945c32c6246b1665b13bd3c60303b598080461.png" title=" 1: critica Article ({email=dalmi@gmail.com, password=123456789, titleArticle=Hello, articleTopic=Greet, description=When you arrive at a new place always say hello, tags=Hello, newtitleArticle=Hola, newarticleTopic=saludo, newdescription=siempre que llega a un lugar saluda}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.4.34</span>
+</div>
+</body>
+</html>
